@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*----------全局设置----------*/
+*{margin:0; padding:0;font-family:"微软雅黑"; font-size:12px;} 
+a{text-decoration:none;}
+input{border:none 0;}
+img{border:none;}
+li{list-style:none;}
+
+/*---------内容区域-----------*/
+body{ background-color:#f1f0ee;}
+.big_box{width:1002px;margin:38px auto;border:1px solid #d4d4d4;background-color:#FFFFFF;}
+
+/*------logo导航区--------------*/
+.top{width:940px; margin:15px auto; height:80px;}
+.logo{width:270px; height:52px; margin-top:20px;float:left;}
+.logo img{width:184px; height:52px;}
+.nav{width:660px; height:52px; float:right;margin-top:20px;}
+.nav li{float:left; height:25px; line-height:25px; width:90px; padding:10px 0;}
+.nav li a{display:inline-block; text-align:center; width:90px; height:20px; line-height:20px; border-right:#f1f0ee 1px solid; font-size:16px; }
+.nav li:hover{background:#FF0000;}
+.nav li:hover a{color:#FFFFFF}  /* li聚焦时设置a的颜色 */
+
+/*--------焦点图区-------------*/
+.banner{width:940px; height:443px; margin:0 auto;}
+.banner img{width:940px; height:443px;}
+
+/*--------图文景区展示---------------*/
+.content{width:940px; height:500px; margin:0 auto;}
+.content_left{width:670px; height:500px; float:left; }
+.content_left_tuwen{width:670px; height:300px;}
+.content_left_tuwen1{width:200px; height:300px; float:left;}
+.content_left_tuwen2{width:200px; height:300px; float:left;  margin-left:33px;}
+.content_left_tuwen3{width:200px; height:300px; float:left;  margin-left:33px;}
+.content_left_tuwen .title{margin:15px 0; width:200px; height:21px; line-height:21px;}
+.content_left_tuwen .s1{ font-size:18px; color:#5c5c5c;}
+.content_left_tuwen .desc{color: #5c5c5c;line-height: 23px;}
+
+/*--------景区图片内容---------------*/
+.content_left_pic{width:670px; height:200px;}
+.content_left_pic1{width:100%; height:45px; margin-top:20px;}
+.content_left_pic1 p{font-size:18px; color:#5c5c5c;}
+.content_left_pic2 table td{width:167px; text-align:center}
+
+/*--------右侧新闻区域---------------*/
+.content_right{width:238px; height:500px; float:right;}
+.msgbox .title{width:238px; height:30px; line-height:30px; vertical-align:middle;border-bottom:1px solid #d4d4d4;}
+.msgbox .title .t1{float:left;  width:100px; height:30px; font-size:16px; color:#5c5c5c; float:left }
+.msgbox .title .t2{float:right;  width:40px; height:20px; padding-top:10px;}
+.msgbox .news{width:234px; padding-left:4px;}
+.msgbox .news img{margin-left:5px;}
+.msgbox .news a{ color:#000000; margin-left:3px;  font-size:13px; line-height:20px;}
+.msgbox2{margin-top:15px;}
+.msgbox3{margin-top:40px;}
+.msgbox3 .news{padding-top:10px;}
+.msgbox3 p{ font-size:14px;line-height:25px; text-align:center}
+
+/*--------底部---------------------*/
+.footer{ width:940px; height:71px; margin:15px auto; background:url(../images/footer_22.png);}
+.footer .link{ float:left; margin-left:42px; margin-top:30px;}
+.footer .link a{color:#FFF; padding:0 10px;  border-right:solid #999 1px; font-size:14px;}
+.footer .copyright{float:right; margin-right:50px;  margin-top:30px;  color:#FFF; font-size:14px; } 
+
+
+
