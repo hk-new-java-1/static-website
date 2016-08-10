@@ -1,0 +1,446 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=dexice-width,initial-scale=1.0,maximun-scale=1.0,
+user-scalable=no">
+<title>用户注册-酷狗音乐</title>
+<link href="images/favicon.ico" rel="shortcut icon">
+<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.min.css">
+<script src="bootstrap-3.3.5-dist/js/jquery-3.1.0.min.js"></script>
+<script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<style>
+	
+	body{font-family:微软雅黑;}
+	#bar a{
+		display: inline;
+   		color: #fff;
+    	font-size: 16px;
+		font-family:微软雅黑;
+    	height: 60px;
+   	    line-height: 60px;
+   	    padding: 0px 11px;
+    	text-align: center;
+	}
+	#bar a:hover{
+		text-decoration:none;
+		display: inline;
+		color: #71c3e7;
+		font-size: 16px;
+		font-family:微软雅黑;
+		height: 60px;
+		line-height: 60px;
+		padding: 0px 11px;
+		text-align: center;
+		}
+	label{line-height: 38px;font-size: 14px; text-align:center;}
+	
+</style>
+
+<!--导航栏-->
+  <nav class="navbar" style=" background-color:#008ad4; margin-bottom:10px;">
+  		<span id="bar">
+          <img alt="Brand" src="images/brand.jpg" style="padding-left:200px;">
+          <a href="#">酷狗商城</a>
+          <a href="#">下载客户端</a>
+          <a href="#">音乐直播</a>
+          <a href="#">酷狗音乐人</a>
+          <a style=" padding-left:100px;" href="#">产品中心</a>
+          <a href="#">VIP中心</a>
+          <a href="#">客服中心</a>
+        </span>
+  </nav>
+
+
+  
+	<div class="container" style="border:#54ade7 ridge 2px; padding-top:0px;">
+    	<div class="row">
+	
+            <!--标签页导航-->
+              <ul id="nav" class="nav nav-tabs">
+                  <li class="active"><a href="#China"><img src="images/email.png"></a></li>
+                  <li><a href="#America"><img src="images/mobile.png"></a></li>
+                  <li><a href="#Korea"><img src="images/user.png"></a></li>
+              </ul>
+            <!--标签页内容-->
+              <div class="tab-content">
+<script>
+	function gainFocus(x){
+		//根据id获取指定额元素
+		x.style.backgroundColor="white";
+	}
+	function lostFocus(element){
+		element.style.backgroundColor="#f3f3f3";
+	}
+	
+	/*function Focuspwd(){
+			
+				document.getElementById('span1').innerHTML='密码需由6-16位字母、数字和符号组成';
+	}
+	function Blurpwd(){
+		document.getElementById('span1').innerHTML='';
+		}*/
+</script>
+<style>
+#span1,#span2,#span3,#span4,#span5,#span6,#span7,#span8,#span9{ color:#7b7b7b;}
+</style>
+              <!--邮箱注册-->
+              
+              
+               <div class="tab-pane fade in active" id="China" style="padding-top:20px;">
+               	
+               
+                    <table class="table table-condensed">
+                      <tr>
+                        <td width="28%" rowspan="8">&nbsp;</td>
+                        <td width="74%">
+                            
+                              <div class="form-group">
+                              
+                              <!--<input id="pwd" type="text" onFocus="gainFocus(this),document.getElementById('span2').innerHTML='密码必须是6-20位字母、数字或下划线组合'" onBlur="lostFocus(this),document.getElementById('span2').innerHTML=''" />
+        <span id="span2"></span>-->
+        
+                                <label for="inputEmail3" class="col-sm-2 control-label">*邮箱 :</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control" onFocus="gainFocus(this),document.getElementById('span1').innerHTML='&nbsp;&nbsp;&nbsp;请输入您的常用邮箱地址'" onBlur="lostFocus(this),document.getElementById('span1').innerHTML=''" />
+                                  <span id="span1"></span>
+                                </div>
+                              </div>
+                            
+    					</td>
+                        <td width="1%" rowspan="8">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*密码 :</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" onFocus="gainFocus(this),document.getElementById('span2').innerHTML='&nbsp;&nbsp;&nbsp;密码需由6-16位字母、数字和符号组成'" onBlur="lostFocus(this),document.getElementById('span2').innerHTML=''" />
+                                  <span id="span2"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">密码强弱</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*确认密码:</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control"onFocus="gainFocus(this),document.getElementById('span4').innerHTML='&nbsp;&nbsp;&nbsp;请再次输入密码'" onBlur="lostFocus(this),document.getElementById('span4').innerHTML=''" />
+                                  <span id="span4"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*性别 :
+                                    	
+                                    </label>
+                                    <div class="col-sm-10" style=" padding:15px 15px;">
+                                    	<input type="Radio" name="gender" value="Male" checked>男&nbsp;&nbsp;&nbsp;
+                                        <input type="Radio" name="gender" value="Female">女
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*验证码 :</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:130px;"><input type="checkbox" checked>我已经认真阅读并同意<a href="#" style=" color:#54ade7; text-decoration:underline;"> 《酷狗服务条款》</a></p></td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:130px;"><input type="button" class="btn btn-info btn-lg" value="注册"></p></td>
+                      </tr>
+                    </table>
+                
+                </div>
+               <!--手机注册-->
+               <div class="tab-pane fade" id="America" style="padding-top:20px;">
+               
+               	<table class="table table-condensed">
+                      <tr>
+                        <td width="20%" rowspan="8">&nbsp;</td>
+                        <td width="46%">
+                            
+                              <div class="form-group">
+<style>
+	#label{ height:53px;}
+</style>
+                                <label id="label" for="inputEmail3" class="col-sm-2 control-label">* 手机号码：</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control" onFocus="gainFocus(this),document.getElementById('span8').innerHTML='&nbsp;&nbsp;&nbsp;请输入手机号码'" onBlur="lostFocus(this),document.getElementById('span8').innerHTML=''" />
+                                  <span id="span8"></span>
+                                </div>
+                              </div>
+                            
+    					</td>
+                        <td width="10%" rowspan="8">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*短信验证：</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">* 密码：</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" onFocus="gainFocus(this),document.getElementById('span3').innerHTML='&nbsp;&nbsp;&nbsp;密码需由6-16位字母、数字和符号组成'" onBlur="lostFocus(this),document.getElementById('span3').innerHTML=''" />
+                                  <span id="span3"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">	
+
+密码强度:弱 
+</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">* 确认密码：	
+</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control"onFocus="gainFocus(this),document.getElementById('span5').innerHTML='&nbsp;&nbsp;&nbsp;请再次输入密码'" onBlur="lostFocus(this),document.getElementById('span5').innerHTML=''" />
+                                  <span id="span5"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">* 性别：	</label>
+                                    <div class="col-sm-10" style=" padding:15px 15px;">
+                                    	<input type="Radio" name="gender" value="Male" checked>男&nbsp;&nbsp;&nbsp;
+                                        <input type="Radio" name="gender" value="Female">女
+                                    </div
+                                  ></div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:80px;"><input type="checkbox" checked>我已经认真阅读并同意<a href="#" style=" color:#54ade7; text-decoration:underline;"> 《酷狗服务条款》</a></p></td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:80px;"><input type="button" class="btn btn-info btn-lg" value="注册"></p></td>
+                      </tr>
+                    </table>
+               
+               
+               </div>
+               <!--用户名注册-->
+               <div class="tab-pane fade" id="Korea" style="padding-top:20px;">
+               
+               		<table class="table table-condensed">
+                      <tr>
+                        <td width="20%" rowspan="8">&nbsp;</td>
+                        <td width="46%">
+                            
+                              <div class="form-group">
+                                <label for="inputEmail3" class="col-sm-2 control-label">* 用户名：</label>
+                                <div class="col-sm-10">
+                                  <input type="email" class="form-control" onFocus="gainFocus(this),document.getElementById('span9').innerHTML='&nbsp;&nbsp;&nbsp;请输入4-6位字母、数字或中文'" onBlur="lostFocus(this),document.getElementById('span9').innerHTML=''" />
+                                  <span id="span9"></span>
+                                </div>
+                              </div>
+                            
+    					</td>
+                        <td width="10%" rowspan="8">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td>
+                            
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">*密码：</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control" onFocus="gainFocus(this),document.getElementById('span7').innerHTML='&nbsp;&nbsp;&nbsp;密码需由6-16位字母、数字和符号组成'" onBlur="lostFocus(this),document.getElementById('span7').innerHTML=''" />
+                                      <span id="span7"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">密码强度</label>
+                                    <div class="col-sm-10">
+                                      <input type="" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">	
+
+* 确认密码：	
+</label>
+                                    <div class="col-sm-10">
+                                      <input type="password" class="form-control"onFocus="gainFocus(this),document.getElementById('span6').innerHTML='&nbsp;&nbsp;&nbsp;请再次输入密码'" onBlur="lostFocus(this),document.getElementById('span6').innerHTML=''" />
+                                  <span id="span6"></span>
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">* 性别：	
+</label>
+                                    <div class="col-sm-10" style=" padding:15px 15px;">
+                                    	<input type="Radio" name="gender" value="Male" checked>男&nbsp;&nbsp;&nbsp;
+                                        <input type="Radio" name="gender" value="Female">女
+                                    </div
+                                  ></div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                        	
+                                  <div class="form-group">
+                                    <label for="inputEmail3" class="col-sm-2 control-label">* 验证码：</label>
+                                    <div class="col-sm-10">
+                                      <input type="email" class="form-control" id="inputEmail3">
+                                    </div>
+                                  </div>
+                            
+                        </td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:80px;"><input type="checkbox" checked>我已经认真阅读并同意<a href="#" style=" color:#54ade7; text-decoration:underline;"> 《酷狗服务条款》</a></p></td>
+                      </tr>
+                      <tr>
+                        <td><p  style="padding-left:80px;"><input type="button" class="btn btn-info btn-lg" value="注册"></p></td>
+                      </tr>
+                    </table>
+               
+               </div>
+              
+              <script>
+        		$("#nav a").click(function(){
+				$(this).tab("show");	//this代指当前的超链接，tab函数让关联的标签内容显示
+				});
+        	  </script>
+         </div> 
+	</div>
+</div>
+
+<!----------------------------------------footer--------------------------------->
+<style>	
+	.links li{ display:block;}
+	.links li a{color: #b1b3b9; padding: 10px;text-decoration: none; display:block; float:left;}
+	.links li a:hover{ color:#009af3;}
+	.copyright{ clear:both;color: #b1b3b9;}
+	div .copyright p{ text-align:center;}
+	
+</style>
+<div id="footer">
+	<div class="navbar navbar-inverse">
+		
+          <ul class="links" style="padding-left:200px;">
+          <span>
+          <li><a href="#">关于酷狗&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">广告服务&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">版权指引&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">用户服务协议&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">推广合作&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">酷狗音乐人&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">酷狗音乐推&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">招聘信息&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">客服中心&nbsp;&nbsp;&nbsp;|</a></li>
+          
+          <li><a href="#">用户体验提升计划</a></li>
+          </span>
+		</ul>
+       
+<!-------------------------------------------版权----------------------------------------------------->
+        <div class="copyright">
+        	<br>
+            <br>
+            <br>
+            <br>
+            <p style="color:#337ab7;">
+            Copyright  ©  2016年8月10号 NIIT学员 <strong>廖苓杏</strong> 著
+            </p>
+        </div>
+	</div>
+</div>
+
+
+
+</body>
+</html>
