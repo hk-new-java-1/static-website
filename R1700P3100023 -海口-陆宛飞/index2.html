@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery-3.1.0.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+    <style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        /*background: url(images/header.jpg) repeat-x;*/
+        background-color: #f6f4e4;
+    }
+    
+    #main {
+        width: 1000px;
+        height: 1200px;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    
+    #left {
+        width: 280px;
+        height: 100%;
+        margin: 0;
+        float: left;
+    }
+    
+    #lefttop {
+        width: 100%;
+        height: 170px;
+        text-align: center;
+        background-color: #D1CBCB;
+    }
+    
+    #leftdown h2 {
+        background-color: #898989;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        text-indent: 35px;
+    }
+    
+    #leftdown {
+        height: 1070px;
+        background-color: #D1CBCB;
+    }
+    
+    #lefthome {
+        height: 250px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+    #lefthome img {
+        position: relative;
+        top: 5px;
+    }
+    
+    #lefthome ul {
+        margin: 0 auto;
+        list-style-type: none;
+        width: 190px;
+        line-height: 40px;
+    }
+    
+    #lefthome ul li a {
+        text-decoration: none;
+    }
+    
+    #zixun h2 {
+        background-color: #898989;
+        text-indent: 35px;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    #zixun h2 img {
+        float: right;
+        position: relative;
+        top: 5px;
+        /*title:"more";*/
+    }
+    
+    #zixun ul a {
+        font-size: 14px;
+        text-decoration: none;
+        line-height: 30px;
+    }
+    
+    #zixun ul a:hover {
+        color: #FF6600;
+        text-decoration: underline;
+        ;
+    }
+    
+  
+    #login .container{
+    	margin-top: 20px;
+    	margin-left: 50px;
+    }
+    
+    #right #righttop {
+        width: 612px;
+        height: 163px;
+        background: url(images/top2.png);
+    }
+    
+    @keyframes donghua1 {
+        0% {
+            color: #D93600;
+        }
+        40% {
+            color: blue;
+            transform: translate(0px, 10px);
+        }
+        60% {
+            color: #FF6A00;
+        }
+        80% {
+            color: green;
+            transform: translate(10px, 0px);
+        }
+    }
+    
+    #righttop h2,
+    #righttop h3 {
+        color: #D93600;
+        text-indent: 30px;
+        animation: donghua1 1s infinite;
+    }
+    
+    #right #menu #xuanhua>li {
+        float: left;
+        width: 95px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    #right #menu #xuanhua {
+        list-style-type: none;
+        width: 570px;
+        height: 40px;
+        background-color: #62B05A;
+        margin: 7px 0;
+    }
+    
+    #right #menu #xuanhua>li:hover {
+        color: yellow;
+        background-color: green;
+    }
+    
+    #right #menu #xuanhua>li ul {
+        list-style-type: none;
+        /*visibility: hidden;*/
+        padding: 0;
+        font-size: 15px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 95px;
+    }
+    
+    #right #menu #xuanhua>li ul a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #right #menu #xuanhua>li ul li {
+        background-color: #6dd856;
+        height: 25px;
+        line-height: 25px;
+    }
+    
+    #right #menu #xuanhua>li ul li:hover {
+        background-color: #3a756b;
+    }
+    
+    #right {
+        width: 720px;
+        height: 100%;
+        margin: 0;
+        float: left;
+        /*border: solid 2px black;*/
+    }
+    
+    #rightcenter {
+        width: 607px;
+        height: 450px;
+        margin-left: 5px;
+        position: relative;
+    }
+    /*#rightcenter>a{
+		z-index: -1;
+	}
+*/
+    
+    #rightcentermenu {
+        position: absolute;
+        bottom: 10px;
+        left: 238px;
+    }
+    
+    #rightcentermenu a {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgba(200, 200, 200, 0.9);
+    }
+    
+    #rightcentermenu a:hover {
+        background-color: rgba(100, 100, 100, 0.5);
+    }
+    
+    #hua ul {
+        padding: 0px;
+    }
+    
+    #hua li {
+        float: left;
+        list-style-type: none;
+        width: 220px;
+        height: 280px;
+        margin: 2px;
+    }
+    
+    .huatitle {
+        font-weight: bold;
+    }
+    
+    .money {
+        color: red;
+        animation: donghua2 1s infinite;
+        /*text-shadow:1px 0 #8B4513,
+					0 1px #8B4513, 
+					0 -1px #8B4513, 
+					-1px 0 #8B4513;*/
+    }
+    
+    @keyframes donghua2 {
+        0% {
+            color: #FFCCCC;
+        }
+        50% {
+            color: #FF3333;
+        }
+    }
+    
+    #hua .nomal {
+        font-weight: normal;
+        font-size: 14px;
+    }
+    
+    #foot {
+        position: absolute;
+        top: 1250px;
+        background: url(images/footer.gif) repeat-x;
+        width: 100%;
+        height: 227px;
+    }
+    
+    #bq {
+        position: relative;
+        top: 75px;
+        left: 400px;
+        width: 630px;
+        height: 52px;
+        display: block;
+        /*overflow:hidden;*/
+    }
+    
+    #foot p {
+        /*display: block;*/
+        font-size: 12px;
+        position: relative;
+        top: 70px;
+        text-align: center;
+        color: rgb(400, 400, 400);
+        /*left: 385px;*/
+        /*width: 660px;*/
+    }
+    
+    #foot p a {
+        text-decoration: none;
+        color: rgb(400, 400, 400);
+    }
+    
+    #foot p a:hover {
+        text-decoration: underline;
+        color: #FF6600;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="lefttop">
+                <br>
+                <a href="#"><img id="headflower" src="images/shop.png"></a>
+            </div>
+            <div id="leftdown">
+                <h2>所有商品分类</h2>
+                <div id="lefthome">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="images/tbshouye.jpg">主页</a>
+                        </li>
+                        <li>
+                            <a href="huayu.html" target="_blank"><img src="images/tbxianhua.jpg">花语百科</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbhualan.jpg">精美花篮</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbjr.jpg">绿植花卉</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbtehui.jpg">节日特惠</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbsr.jpg">同城配送</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="zixun">
+                    <h2>感动瞬间<a href="#"><img title="更多感动" src="images/more.png"></a></h2>
+                    <ul>
+                        <li><a href="">愿此生做你身旁的一株木棉</a></li>
+                        <li><a href="">珍惜人生,更加珍惜你</a></li>
+                        <li><a href="">你是我童话里的,那一位公主</a></li>
+                        <li><a href="">未来的我带你去纵横</a></li>
+                        <li><a href="">爱你如初,永世不变</a></li>
+                    </ul>
+                </div>
+                <div id="login">
+                    <h2>联系我们</h2>
+                    <div class="container">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalDialog" data-backdrop="static">登录</button>
+                        <a target="_blank" href="register.html"><button type="button" class="btn btn-success">注册</button></a>
+                        <div id="modalDialog" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" class="close">&times;</button>
+                                        <h3>用户登录</h3>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <div class="from-group">
+                                                用户名:
+                                                <input type="text" class="form-control"></input>
+                                                密码:
+                                                <input type="password" class="form-control"></input>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">登录</button>
+                                            <button type="button" class="btn btn-default">注册</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="righttop">
+                <br>
+                <br>
+                <h2>66鲜花店<br></h2>
+                <h3>欢迎您的选购</h3>
+            </div>
+            <div id="menu">
+                <ul id="xuanhua">
+                    <li>按花材
+                        <ul>
+                            <li><a href="#">红玫瑰</a></li>
+                            <li><a href="#">粉玫瑰</a></li>
+                            <li><a href="#">白玫瑰</a></li>
+                            <li><a href="#">康乃馨</a></li>
+                            <li><a href="#">郁金香</a></li>
+                            <li><a href="#">百合花</a></li>
+                            <li><a href="#">马蹄莲</a></li>
+                        </ul>
+                    </li>
+                    <li>按价格
+                        <ul>
+                            <li><a href="#">200元以下</a></li>
+                            <li><a href="#">200-300元</a></li>
+                            <li><a href="#">300-500元</a></li>
+                            <li><a href="#">500-800元</a></li>
+                            <li><a href="#">800-1000元</a></li>
+                            <li><a href="#">1000元以上</a></li>
+                        </ul>
+                    </li>
+                    <li>按数量
+                        <ul>
+                            <li><a href="#">1朵</a></li>
+                            <li><a href="#">3朵</a></li>
+                            <li><a href="#">9朵</a></li>
+                            <li><a href="#">11朵</a></li>
+                            <li><a href="#">19朵</a></li>
+                            <li><a href="#">66朵</a></li>
+                            <li><a href="#">99朵</a></li>
+                        </ul>
+                    </li>
+                    <li>按节日
+                        <ul>
+                            <li><a href="#">春节</a></li>
+                            <li><a href="#">情人节</a></li>
+                            <li><a href="#">元旦节</a></li>
+                            <li><a href="#">妇女节</a></li>
+                            <li><a href="#">母亲节</a></li>
+                            <li><a href="#">父亲节</a></li>
+                            <li><a href="#">教师节</a></li>
+                            <li><a href="#">中秋节</a></li>
+                        </ul>
+                    </li>
+                    <li>按用途
+                        <ul>
+                            <li><a href="#">爱情鲜花</a></li>
+                            <li><a href="#">友情鲜花</a></li>
+                            <li><a href="#">生日鲜花</a></li>
+                            <li><a href="#">开业鲜花</a></li>
+                            <li><a href="#">感恩鲜花</a></li>
+                            <li><a href="#">祝福鲜花</a></li>
+                            <li><a href="#">家庭鲜花</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="rightcenter">
+                <a href=""><img id="rightcentertu" src="images/1.png" alt=""></a>
+                <div id="rightcentermenu">
+                    <a href="#" onmouseover="changeTu(1)"></a>
+                    <a href="#" onmouseover="changeTu(2)"></a>
+                    <a href="#" onmouseover="changeTu(3)"></a>
+                    <a href="#" onmouseover="changeTu(4)"></a>
+                    <a href="#" onmouseover="changeTu(5)"></a>
+                </div>
+            </div>
+            <div id="hua">
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/hua1.jpg"></a>
+                        <span class="huatitle">
+							<br>鲜花-感激<br><span class="nomal">订购价:</span><span class="money">￥189</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/hua2.jpg"></a>
+                        <span class="huatitle">
+							<br>鲜花-给你幸福<br><span class="nomal">订购价:</span><span class="money">￥128</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/hua5.jpg"></a>
+                        <span class="huatitle">
+							<br>永生花-温暖你心<br><span class="nomal">订购价:</span><span class="money">￥228</span>
+                        </span>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#"><img src="images/hua3.jpg"></a>
+                        <span class="huatitle">
+							<br>鲜花-LOVE 99<br><span class="nomal">订购价:</span><span class="money">￥508</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/hua4.jpg"></a>
+                        <span class="huatitle">
+							<br>鲜花-一往情深<br><span class="nomal">订购价:</span><span class="money">￥238</span>
+                        </span>
+                    </li>
+                    <li>
+                        <a href="#"><img src="images/hua6.jpg"></a>
+                        <span class="huatitle">
+							<br>鲜花-夏之物语<br><span class="nomal">订购价:</span><span class="money">￥388</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <div id="bq">
+            <a href="#"><img src="images/bq1.png"></a>
+            <a href="#"><img src="images/bq2.gif"></a>
+            <a href="#"><img src="images/bq3.gif"></a>
+            <a href="#"><img src="images/bq4.gif"></a>
+            <a href="#"><img src="images/bq5.jpg"></a>
+        </div>
+        <p>中国花卉协会会员 中国电子商务协会会员 ICP经营许可证：粤B2-20050744 | 粤ICP备09171662号 Copyright © 2005-2016
+            <br>中国鲜花礼品网 <a href="#">www.66.com</a>中国鲜花网领先品牌，鲜花速递专家！
+        </p>
+    </div>
+
+
+
+
+    <script>
+    $(document).ready(function() {
+        $("#right #menu #xuanhua>li").mouseenter(function() {
+            $(this).find("ul").slideDown(500);
+        })
+        $("#right #menu #xuanhua>li").mouseleave(function() {
+            $(this).find("ul").slideUp();
+        })
+    })
+
+    function changeTu(x) {
+        document.getElementById("rightcentertu").src = "images/" + x + ".png";
+    }
+    </script>
+</body>
+
+</html>
