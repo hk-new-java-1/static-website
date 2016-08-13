@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>玩具网站</title>
+<link rel="stylesheet" href="css/homecss.css" />
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+
+	<div id="MainD"><!--整体div-->
+      <div id="tit"><h1>Playthings</h1></div>
+      <div id="stit"><h3><small>-- In my frail canoe I struggle to cross the sea of desire, and forget that I too am playing a game. 
+      </small></h3></div>
+      <div id="MenuD">
+    <ul id="blo">
+  <li><a id="current" href="home.html">首页</a> </li>
+  <li><a href="product.html" onMouseOver="changePic(1)">儿童向玩具</a>
+    <ul>
+      <li><a href="product.html">量子积木</a></li>
+      <li><a href="product.html">科学饰品</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(2)">小草饲养员</a>
+    <ul>
+      <li><a href="product.html">小羊勋章</a></li>
+      <li><a href="product.html">天然猪肉丸</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(3)">Humanoid</a>
+    <ul>
+      <li><a href="product.html">MS二代</a></li>
+      <li><a href="product.html">EV3pro</a></li>
+      <li><a href="product.html">Expansion配件</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(4)">Leg Godt</a>
+    <ul>
+      <li><a href="product.html" target="_blank">对角巷</a></li>
+      <li><a href="product.html" target="_blank">Dead Star</a></li>
+      <li><a href="product.html" target="_blank">圣西瓦里大教堂</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(5)">Play Station</a>
+    <ul>
+      <li><a href="product.html">龙が如く</a></li>
+      <li><a href="product.html">BloodBorne</a></li>
+      <li><a href="product.html">The Witcher 3</a></li>
+      <li><a href="product.html">Final Fantasy</a></li>
+      <li><a href="product.html">Dragon Quest</a></li>	
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(6)">UAV</a>
+    <ul>
+      <li><a href="product.html">DJI Phantom3</a></li>
+      <li><a href="product.html">Ghostdrone2.0</a></li>
+    </ul>
+  </li>
+</ul></div>
+	<div class="tab-pane fade in active" id="China" style="padding-top:20px;">
+    <table class="table table-condensed"><tr>
+    <td width="28%" rowspan="8">&nbsp;</td>
+    <td width="44%"><div class="form-group"><label for="inputEmail3" class="col-sm-2 control-label">*邮箱 :</label><div class="col-sm-10">
+     <input type="email" class="form-control"  
+     pattern="\w[-\w.+]*@([A-Za-z0-9][-A-Za-z0-9]+\.)+[A-Za-z]{2,14}" 
+     onFocus="gainFocus(this),document.getElementById('span1').innerHTML='&nbsp;&nbsp;&nbsp;请输入您的常用邮箱地址'" 
+     onBlur="lostFocus(this),document.getElementById('span1').innerHTML=''"/>
+      <span id="span1"></span></div></div></td>
+       <td width="28%" rowspan="8">&nbsp;</td></tr><tr><td>
+       <div class="form-group"><label for="inputEmail3" class="col-sm-2 control-label">*密码 :</label>
+       <div class="col-sm-10">
+       <input type="password" class="form-control" 
+       pattern="/^[\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{6,16}$/" 
+       onFocus="gainFocus(this),document.getElementById('span2').innerHTML='&nbsp;&nbsp;&nbsp;密码需由6-16位字母、数字和符号组成'" 
+       onBlur="lostFocus(this),document.getElementById('span2').innerHTML=''" /><span id="span2"></span>
+       </div></div>
+       </td> </tr> <tr></tr><tr><td>
+       <div class="form-group"><label for="inputEmail3" class="col-sm-2 control-label">*确认密码:</label>
+       <div class="col-sm-10"><input type="password" class="form-control"onFocus="gainFocus(this),document.getElementById('span4').innerHTML='&nbsp;&nbsp;&nbsp;请再次输入密码'" onBlur="lostFocus(this),document.getElementById('span4').innerHTML=''" />
+       <span id="span4"></span>
+       </div></div>
+       </td> </tr> <tr> <td>
+       <div class="form-group"><label for="inputEmail3" class="col-sm-2 control-label">*性别 :</label>
+       <div class="col-sm-10" style=" padding:15px 15px;">
+       <input type="Radio" name="gender" value="Male" checked>男&nbsp;&nbsp;&nbsp;
+       <input type="Radio" name="gender" value="Female">女
+        </div></div>
+        </td></tr> <tr> <td>
+        <div class="form-group"><label for="inputEmail3" class="col-sm-2 control-label">*验证码 :</label>
+        <div class="col-sm-10"><input type="email" class="form-control" id="inputEmail3">
+        </div></div>
+        </td></tr><tr><td><p  style="padding-left:130px;"><input type="checkbox" checked>我已经认真阅读并同意<a href="#" style=" color:#54ade7; text-decoration:underline;"> 服务条款</a></p>
+        </td></tr> <tr><td>
+        <p  style="padding-left:130px;"><input type="button" class="btn btn-info btn-lg" value="注册"></p>
+        </td></tr></table></div>
+
+    <div id="Bott"></ul>
+	<p>Copyright © 2000-2016 海口 All Rights Reserved.</p>
+	<li><a href="#">S1700P3100027</a></li></ul></div>
+ </div></div>
+</div>	
+</div>
+</div>
+
+
+    
+    
+<script>
+		
+	$(document).ready(function(){
+		
+		$("#blo>li").mouseenter(function(){
+			$(this).find("ul").slideDown(250);	
+		});
+		$("#blo>li").mouseleave(function(){
+			$(this).find("ul").slideUp();
+		});
+		$("#cls").click(function(){
+			document.getElementById("Logink").style.display="none";
+			});
+	});
+	
+		function changePic(img){ 
+			document.getElementById("LeftD").style.backgroundImage
+			="url(pic/"+img+".jpg)";}
+			
+		function gainFocus(x){
+		x.style.backgroundColor="white";}
+		
+		function lostFocus(element){
+		element.style.backgroundColor="#f3f3f3";}
+</script>
+</body>
+</html>

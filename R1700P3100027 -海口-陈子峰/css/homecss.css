@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	width:1080px;
+	margin:0 auto;
+	padding:0px;
+	font:"微软雅黑";
+	font-size:36px;
+	}
+p, ul, h1, h2, h4, img, form, label{
+	list-style-type: none;
+	padding:0px;
+	margin:0px auto;
+	}
+#MainD{width:1080px;
+	height:150px;
+	position:relative;
+	margin:0 auto;
+	padding:0px;
+	background-color:#8BE;
+	float:left;
+	text-align:center;
+	}
+#MainD h1{
+	font-family: Arial, sans-serif;
+	font-size:50px;
+	color: #369;
+	border-bottom: 1px solid #999;
+	padding-bottom: 12px;}
+#stit{
+	text-align:right;
+	}
+#MenuD{
+	background-color:#69C;
+	position:relative;
+	z-index:2; 
+	}
+#LeftD{
+	position:relative;
+	z-index:1; 
+	float:left;
+	width:1080px;
+	height:720px;
+	background-image:url(../pic/1.jpg);
+	background-repeat: no-repeat;
+	background-size:100%;
+	background-color:#333
+		}
+#prd{
+	position:relative;
+	z-index:1; 
+	float:inherit;
+	width:1080px;
+	height:856.5px;
+	background-color:rgba(232,228,174,0.4);
+	background-size:100%;
+	}
+#Bott{
+	list-style-type: none;
+	position:relative;
+	float:inherit;
+	width:1080px;
+	height:80px;
+	background-color:#333;
+	color:white;
+	text-decoration:underline;}
+#Bott a{
+    font-family: 微软雅黑;
+    text-decoration: none;
+	display: block;
+	background-color:#333;
+		}
+#modalDialog{
+	z-index:3; 
+	}
+ul#blo{ /*id为blo的ul元素*/
+	margin: 0 auto;
+	width: 1080px;	
+	height: 34px;}
+ul#blo>li{
+	width: 150px;
+	height: 34px;
+	float: left;}
+ul#blo>li>a{
+    font-family: 微软雅黑;
+    text-decoration: none;
+    color: #333333;
+    width: 160px;
+    height: 34px;
+	display: block;
+    line-height: 34px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 200;}
+ul#blo>li>a:hover{
+	background:#999;
+	color: #FFF;	}
+ul#blo ul{
+	text-align: center;	
+	display: none;}
+ul#blo ul li a{
+	display: block;
+	width: 160px;
+    height: 24px;
+	font-family: 微软雅黑;
+    text-decoration: none;
+    font-size: 22px;	
+    line-height: 24px;
+	background:#FFF;
+	border-bottom: 1px solid #ccc;	
+	color: black;}
+ul#blo ul li a:hover{
+	background:#999;
+		color: #FFF;}
+.popBox2 {
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    height: 100px;
+    padding-top: 50px;
+    text-align: center;
+    width: 1080px;
+    z-index: 9999;
+    position:fixed;
+    bottom:0;
+	color:#FFF;
+}
+.popBox2 .btnClose {
+    background: rgba(0, 0, 0, 0) url(../pic/13.png);
+    display: inherit;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 99999;
+}
+.Mod{
+    position: absolute;
+	}
+#Mod{
+    position: absolute;
+    bottom: 20px;
+	left:200px;
+    width: 1000px;}
+#modalDialog{
+	color:black;}
+label{line-height:38px;
+	font-size: 14px;
+	text-align:left;
+	z-index:999; }
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}

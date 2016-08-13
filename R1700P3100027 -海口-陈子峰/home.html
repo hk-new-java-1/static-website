@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>玩具网站</title>
+<link rel="stylesheet" href="css/homecss.css" />
+<link rel="stylesheet" href="css/bootstrap.css"/>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/bootstrap.js"></script>
+</head>
+
+<body>
+
+	<div id="MainD"><!--整体div-->
+      <div id="tit"><h1>Playthings</h1></div>
+      <div id="stit"><h3><small>-- In my frail canoe I struggle to cross the sea of desire, and forget that I too am playing a game. 
+      </small></h3></div>
+      <div id="MenuD">
+    <ul id="blo">
+  <li><a id="current" href="home.html">首页</a> </li>
+  <li><a href="product.html" onMouseOver="changePic(1)">儿童向玩具</a>
+    <ul>
+      <li><a href="product.html">量子积木</a></li>
+      <li><a href="product.html">科学饰品</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(2)">小草饲养员</a>
+    <ul>
+      <li><a href="product.html">小羊勋章</a></li>
+      <li><a href="product.html">天然猪肉丸</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(3)">Humanoid</a>
+    <ul>
+      <li><a href="product.html">MS二代</a></li>
+      <li><a href="product.html">EV3pro</a></li>
+      <li><a href="product.html">Expansion配件</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(4)">Leg Godt</a>
+    <ul>
+      <li><a href="product.html" target="_blank">对角巷</a></li>
+      <li><a href="product.html" target="_blank">Dead Star</a></li>
+      <li><a href="product.html" target="_blank">圣西瓦里大教堂</a></li>
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(5)">Play Station</a>
+    <ul>
+      <li><a href="product.html">龙が如く</a></li>
+      <li><a href="product.html">BloodBorne</a></li>
+      <li><a href="product.html">The Witcher 3</a></li>
+      <li><a href="product.html">Final Fantasy</a></li>
+      <li><a href="product.html">Dragon Quest</a></li>	
+    </ul>
+  </li>
+  <li><a href="product.html" onMouseOver="changePic(6)">UAV</a>
+    <ul>
+      <li><a href="product.html">DJI Phantom3</a></li>
+      <li><a href="product.html">Ghostdrone2.0</a></li>
+    </ul>
+  </li>
+</ul></div>
+	<!--图片切换-->
+    <div id="LeftD"></div>
+      
+    <div id="Bott"></ul>
+	<p>Copyright © 2000-2016 海口锤 All Rights Reserved.</p>
+	<li><a href="#">S1700P3100027</a></li></ul></div>
+ </div>
+				 <!--登录框-->
+<div id="Logink">
+<span class="popBox2" style="display:inherit;">
+<a class="t_box1" target="_blank" href="#"></a>
+</span>
+<div id="popCon3" class="popBox2" style="display:inherit;">
+<a id="cls" class="btnClose" title="关闭" href="#"></a>
+
+<div id="Mod" class="container">
+	<div>
+    <h3 align="left">Life’s play is swift.Life’s playthings fall behind one by one and are forgotten.</h3>
+    </div>
+  	<button type="button" class="btn btn-success" data-toggle="modal"
+     data-target="#modalDialog" data-backdrop="static">登录</button>
+     <a href="register.html">
+  	<button type="button" class="btn btn-default">注册</button></a>
+<div id="modalDialog" class="modal fade">
+    	<div class="modal-dialog">
+       		<div class="modal-content">
+            	<div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h2>用户登录</h2>
+                </div>
+            	<div class="modal-body">
+	<form>
+  		<div class="form-group" align="left"> 
+        	Email
+    		<input class="form-control" type="text" value="example@qq.com" onfocus="if (value =='example@qq.com'){value =''}" onblur="if (value ==''){value='example@qq.com'}" />
+    		Password
+    		<input class="form-control" type="password">
+      </div>	
+	</form>
+    </div>
+         <div class="modal-footer">
+          <button type="submit" class="btn btn-primary"
+          data-dismiss="modal">登录</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+         </div>	
+     </div>
+	</div>
+    </div>
+</div>	
+</div>
+
+</div>
+
+
+    
+    
+<script>
+		
+	$(document).ready(function(){
+		
+		$("#blo>li").mouseenter(function(){
+			$(this).find("ul").slideDown(250);	
+		});
+		$("#blo>li").mouseleave(function(){
+			$(this).find("ul").slideUp();
+		});
+		$("#cls").click(function(){
+			document.getElementById("Logink").style.display="none";
+			});
+	});
+	
+		function changePic(img){ 
+			document.getElementById("LeftD").style.backgroundImage
+			="url(pic/"+img+".jpg)";}   
+</script>
+</body>
+</html>
