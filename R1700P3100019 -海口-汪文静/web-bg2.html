@@ -1,0 +1,305 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" 
+href="bootstrap/css/bootstrap.min.css" >
+<script src="bootstrap/js/jquery-3.1.0.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<style>
+#main {
+	width: 100%;
+	height: 1600px;
+	background: url(web-homework-msg/e1.jpg) repeat-y;
+	
+	margin: 0;
+	padding: 0;
+}
+#mainall {
+	width: 920px;
+	height: 1600px;
+	background:rgba(204,204,204,0.8);
+	margin: 0 auto;
+}
+#mainhead {
+	width: 920px;
+	height: 300px;
+	background: url(web-homework-msg/e2.jpg) no-repeat;
+	margin: 0 auto;
+	position: relative;
+}
+#maincenterleft {
+	width: 400px;
+	height: 500px;
+    position: absolute;
+	left: 30px;
+	top: 300px;
+	margin: 0;
+	
+}
+#maincenterright {
+	width: 500px;
+	height: 500px;
+	background:url(web-homework-msg/e7.jpg) no-repeat;
+	position: absolute;
+	right: 10px;
+	top: 300px;
+	margin: 0;
+	padding: 0;
+}
+#mainlow {
+	width: 920px;
+	height: 800px;
+    margin:20px auto;
+	position: absolute;
+	left: 15px;
+	top: 850px;
+}
+#mainfooter {
+	width: 920px;
+	height: 150px;
+
+	position: absolute;
+	top: 1410px;
+	
+}
+
+	
+
+#word2 li a {
+	left: 50px;
+}
+#maincenterlefthead {
+	width: 450px;
+	height: 150px;
+	border-radius: 30px;
+	background: url(web-homework-msg/e3.jpg) no-repeat;
+}
+ul {
+	list-style-image: url(web-homework-msg/arrow3.gif);
+	line-height: 40px;
+	font-family: 楷体, Geneva, sans-serif;
+	font-size: 20px;
+	margin: 10px 40px;
+	
+}
+ul li a {
+	color: #309;
+}
+ul li a:hover {
+	font-size: 22px;
+	color: #939;
+}
+#maincenterrightlow{
+	width:425px;
+	height:270px;
+	border-radius:30px;
+
+	}
+
+#mainlow1 img{
+	margin:5px 5px;
+	border-radius:120px;
+}
+  .dropdown{
+	   float:left;
+	   margin:0 10px;
+	   }
+	   .container{
+		  margin:0 auto;
+	   }
+	   button[type]{
+		   background-color:rgba(153,153,153,0.7);
+		   }
+#over{
+	width:900px;
+	height:170px;
+	display:inline-block;
+	margin:20px  auto;
+	}
+#over a{
+	font-size:20px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-align:center;
+	position:relative;
+	left:130px;
+	top:60px;
+   
+	}
+h4{
+	position:absolute;
+	left:199px;
+	top:120px;}
+</style>
+</head>
+
+<body>
+<audio autoplay="true" loop><source src="陈慧琳 - 不如跳舞.mp3"></audio>
+<div id="main">
+  <div id="mainall">
+    <div id="mainhead">
+    <div class="container">
+    
+    	
+        <!--
+        button的data-toggle属性说明按钮点击是做数据切换，切换效果是下拉
+        ul打成dropdown-menu，这样开始不可见
+        -->
+        
+        <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            健身新闻
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+                <li><a href="#">明星健身</a></li>
+                <li><a href="#">健身网红</a></li>
+                <li><a href="#">健身趋势</a></li>
+            </ul>
+        </div>
+         <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            锻炼动作
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+                
+                <li><a href="#">锻炼图解</a></li>
+                <li><a href="#">基础健身动作</a></li>
+                <li><a href="#">健美大全</a></li>
+                <li><a href="#">部位分解</a></li>
+            </ul>
+        </div>
+         <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            健身计划
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+               
+                <li><a href="#">找腹肌</a></li>
+                <li><a href="#">练马甲线</a></li>
+                
+                <li><a href="#">找胸肌</a></li>
+                <li><a href="#">找背肌</a></li>
+            </ul>
+        </div>
+         <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+          营养补充
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+                
+                <li><a href="#">增肌粉</a></li>
+                <li><a href="#">营养搭配</a></li>
+          
+                <li ><a href="#">素食主义</a></li>
+                <li><a href="#">减肥餐普</a></li>
+                <li><a href="#">饮品推荐</a></li>
+            </ul>
+        </div>
+         <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            视频精选
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+                <li><a href="#">热身运动</a></li>
+                <li><a href="#">美女热舞</a></li>
+                <li><a href="#">激情动感单车</a></li>
+               
+               
+                <li><a href="#">无氧健美</a></li>
+                <li><a href="#">有氧健美</a></li>
+            </ul>
+        </div>
+         <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            联系我们
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+               
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">订购热线</a></li>
+              
+            </ul>
+        </div>
+        <div class="dropdown">
+            <button type="button" data-toggle="dropdown" class="btn btn-default">
+            老师点这！！
+            <span class="caret"></span>
+            </button>
+            
+            <ul class="dropdown-menu">
+               
+                <li><a href="web-bg2.html">第二个页面</a></li>
+               
+              
+            </ul>
+        </div>
+     </div>
+    <div id="maincenterleft">
+      <div id="maincenterlefthead"> </div>
+      <ul id="word2">
+        <li> <a href= "http://www.jirou.com/xinwen/zenmezuonanren/2016/0721/10724.html">啊哈，胖纸都是潜力股！ </a></li>
+        <li> <a href="http://www.jirou.com/xinwen/jianshenxingye/2016/0721/10725.html">力量de象征</a></li>
+        <li><a href="http://jingyan.baidu.com/article/48b558e36f2af67f38c09a00.html">怎样快速练出胸肌</a> </li>
+        <li><a href="http://jingyan.baidu.com/article/48b558e36f2af67f38c09a00.html">瘦腿哦,心动不如行动</a> </li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">生命源于运动</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">美，来自健康的你</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">有氧运动or无氧运动</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">瑜伽？健美操？</a></li>
+        <li> <a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">Hi！everbody动起来！</a></li>
+        <li> <a href="http://www.jirou.com/xinwen/new/china/2015/0824/10177.html">2015年全国健身锦标赛！</a></li>
+      </ul>
+    </div>
+    <div id="maincenterright">
+     <ul id="word3">
+     
+        <li><a href="http://jingyan.baidu.com/article/48b558e36f2af67f38c09a00.html">瘦腿哦,心动不如行动</a> </li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">生命源于运动</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">美，来自健康的你</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">有氧运动or无氧运动</a></li>
+        <li><a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">瑜伽？健美操？</a></li>
+        <li> <a href="http://jingyan.baidu.com/article/b0b63dbfaf5aa14a483070a8.html">Hi！everbody动起来！</a></li>
+        <li> <a href="http://www.jirou.com/xinwen/new/china/2015/0824/10177.html">2015年全国健身锦标赛！</a></li>
+      </ul>
+      <div id="maincenterrightlow">
+      </div>
+     </div>
+    <div  id="mainlow">
+     <div id="mainlow1">
+     <img src="web-homework-msg/e11.jpg">
+     <img src="web-homework-msg/e12.jpg">
+     <img src="web-homework-msg/e15.jpg">
+     <img src="web-homework-msg/e16.jpg">
+     <img src="web-homework-msg/e17.jpg">
+     <img src="web-homework-msg/e18.jpg">
+                 
+     </div>
+
+     </div>
+    <div id="mainfooter">
+     <div id="over" class="over">
+     <a href="web-bg2.html" >汪文静的第一个网页|</a>
+     <a href="web-bg2.html">汪文静的qq号|</a>
+     <a href="web-bg2.html">汪文静的微信号|</a>
+     <a href="web-bg2.html">啦啦啦啦啦!</a><br>
+     <h4>本版权归海南省海口软件园NIIT汪文静所有!!!</h4>
+     
+    </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

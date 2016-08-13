@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+  body{
+	   background:url(web-homework-msg/04.jpg) no-repeat;
+	   }
+	 div{
+		 width:218px;
+		 height:245px;
+		 font-family:Tahoma, Geneva, sans-serif;
+		 font-size:16px;
+		 font-weight:bold;
+		 padding:15px 0 0 5px;
+		 }
+	input[type]{
+		border-radius:20px;
+		background-color:#CCC;}
+</style>
+</head>
+
+<body>
+  <div>
+     <form>
+     <h2 align="center" >会员登录</h2>
+   
+    <br>
+    手机号：<input  pattern="1[34578][0-9]{9}" required name="mobile" type="text" autocomplete="off"  >
+    <br><br>
+    密 码：<input id="pwd" pattern="[A-Za-z_0-9]{3,9}" required type="text" onBlur="validatePwd()"><span id="span2"></span>
+    <br><br>
+    <input  type="submit" value="提交">
+   </form>
+    </div>    <script>
+	function validatePwd(){
+		var pwd=document.getElementById("pwd").value;
+		var reg=/[A-Za-z_0-9]{6-20}$/;
+		if(!reg.test(pwd))
+		document.getElementById("span2").innerHTML="密码必须是6-20位字母、数字或下划线组合";
+			else
+				document.getElementById("span2").innerHTML="";
+		
+	}
+    </script>
+</body>
+</html>
