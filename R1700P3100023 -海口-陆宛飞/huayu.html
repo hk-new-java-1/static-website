@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="bootstrap.min.css">
+<script src="jquery-3.1.0.min.js"></script>
+<script src="bootstrap.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <title>花语百科</title>
+    <style type="text/css">
+    body {
+        margin: 0px;
+        padding: 0px;
+        /*background: url(images/header.jpg) repeat-x;*/
+        background-color: #f6f4e4;
+    }
+    
+    #main {
+        width: 1000px;
+        height: 1200px;
+        padding: 0px;
+        margin: 0 auto;
+    }
+    
+    #left {
+        width: 280px;
+        height: 100%;
+        margin: 0;
+        float: left;
+    }
+    
+    #lefttop {
+        width: 100%;
+        height: 170px;
+        text-align: center;
+        background-color: #D1CBCB;
+    }
+    
+    #leftdown h2 {
+        background-color: #898989;
+        margin: 0;
+        height: 40px;
+        line-height: 40px;
+        text-indent: 35px;
+    }
+    
+    #leftdown {
+        height: 1360px;
+        background-color: #D1CBCB;
+    }
+    
+    #lefthome {
+        height: 250px;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+    
+    #lefthome img {
+        position: relative;
+        top: 5px;
+    }
+    
+    #lefthome ul {
+        margin: 0 auto;
+        list-style-type: none;
+        width: 190px;
+        line-height: 40px;
+    }
+    
+    #lefthome ul li a {
+        text-decoration: none;
+    }
+    
+    #zixun h2 {
+        background-color: #898989;
+        text-indent: 35px;
+        height: 40px;
+        line-height: 40px;
+    }
+    
+    #zixun h2 img {
+        float: right;
+        position: relative;
+        top: 5px;
+        /*title:"more";*/
+    }
+    
+    #zixun ul a {
+        font-size: 14px;
+        text-decoration: none;
+        line-height: 30px;
+    }
+    
+    #zixun ul a:hover {
+        color: #FF6600;
+        text-decoration: underline;
+        ;
+    }
+    
+    #login .container{
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+    
+    #right #righttop {
+        width: 612px;
+        height: 163px;
+        background: url(images/top2.png);
+    }
+    
+    @keyframes donghua1 {
+        0% {
+            color: #D93600;
+        }
+        40% {
+            color: blue;
+            transform: translate(0px, 10px);
+        }
+        60% {
+            color: #FF6A00;
+        }
+        80% {
+            color: green;
+            transform: translate(10px, 0px);
+        }
+    }
+    
+    #righttop h2,
+    #righttop h3 {
+        color: #D93600;
+        text-indent: 30px;
+        animation: donghua1 1s infinite;
+    }
+    
+    #right #menu #xuanhua>li {
+        float: left;
+        width: 95px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+    }
+    
+    #right #menu #xuanhua {
+        list-style-type: none;
+        width: 570px;
+        height: 40px;
+        background-color: #62B05A;
+        margin: 7px 0;
+    }
+    
+    #right #menu #xuanhua>li:hover {
+        color: yellow;
+        background-color: green;
+    }
+    
+    #right #menu #xuanhua>li ul {
+        list-style-type: none;
+        /*visibility: hidden;*/
+        padding: 0;
+        font-size: 15px;
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 95px;
+    }
+    
+    #right #menu #xuanhua>li ul a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #right #menu #xuanhua>li ul li {
+        background-color: #6dd856;
+        height: 25px;
+        line-height: 25px;
+    }
+    
+    #right #menu #xuanhua>li ul li:hover {
+        background-color: #3a756b;
+    }
+    
+    #rightcenter {
+        font-size: 15px;
+    }
+    
+    #rightcenter p {
+        text-indent: 2em;
+    }
+    
+    #rightcenter h2 {
+        text-indent: 2em;
+        background-color: #62B05A;
+    }
+    
+    #rightcenter table {
+        margin-left: 30px;
+        border: solid 1px #e2e2e2;
+    }
+    
+    #rightcenter td {
+        border-bottom: solid 1px #e2e2e2;
+        height: 20px;
+    }
+    
+    #rightcenter th {
+        text-align: left;
+        border-bottom: solid 1px #e2e2e2;
+        height: 30px;
+    }
+    
+    #rightcenter .l {
+        border-right: solid 1px #e2e2e2;
+        width: 200px;
+    }
+    
+    #rightcenter .r {
+        width: 350px;
+    }
+    
+    #right {
+        width: 620px;
+        height: 100%;
+        margin: 0;
+        float: left;
+        /*border: solid 2px black;*/
+    }
+    
+    #foot {
+        position: absolute;
+        top: 1550px;
+        background: url(images/footer.gif) repeat-x;
+        width: 100%;
+        height: 227px;
+    }
+    
+    #bq {
+        position: relative;
+        top: 75px;
+        left: 400px;
+        width: 630px;
+        height: 52px;
+        display: block;
+        /*overflow:hidden;*/
+    }
+    
+    #foot p {
+        /*display: block;*/
+        font-size: 12px;
+        position: relative;
+        top: 70px;
+        text-align: center;
+        color: rgb(400, 400, 400);
+        /*left: 385px;*/
+        /*width: 660px;*/
+    }
+    
+    #foot p a {
+        text-decoration: none;
+        color: rgb(400, 400, 400);
+    }
+    
+    #foot p a:hover {
+        text-decoration: underline;
+        color: #FF6600;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="left">
+            <div id="lefttop">
+                <br>
+                <a href="#"><img id="headflower" src="images/shop.png"></a>
+            </div>
+            <div id="leftdown">
+                <h2>所有商品分类</h2>
+                <div id="lefthome">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="images/tbshouye.jpg">主页</a>
+                        </li>
+                        <li>
+                            <a href="huayu.html" target="_blank"><img src="images/tbxianhua.jpg">花语百科</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbhualan.jpg">精美花篮</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbjr.jpg">绿植花卉</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbtehui.jpg">节日特惠</a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/tbsr.jpg">同城配送</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="zixun">
+                    <h2>感动瞬间<a href="#"><img title="更多感动" src="images/more.png"></a></h2>
+                    <ul>
+                        <li><a href="">愿此生做你身旁的一株木棉</a></li>
+                        <li><a href="">珍惜人生,更加珍惜你</a></li>
+                        <li><a href="">你是我童话里的,那一位公主</a></li>
+                        <li><a href="">未来的我带你去纵横</a></li>
+                        <li><a href="">爱你如初,永世不变</a></li>
+                    </ul>
+                </div>
+                <div id="login">
+                    <h2>联系我们</h2>
+                    <div class="container">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalDialog" data-backdrop="static">登录</button>
+                        <a target="_blank" href="register.html"><button type="button" class="btn btn-success">注册</button></a>
+                        <div id="modalDialog" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" data-dismiss="modal" class="close">&times;</button>
+                                        <h3>用户登录</h3>
+                                    </div>
+                                    <form>
+                                        <div class="modal-body">
+                                            <div class="from-group">
+                                                用户名:
+                                                <input type="text" class="form-control"></input>
+                                                密码:
+                                                <input type="password" class="form-control"></input>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-primary">登录</button>
+                                            <button type="button" class="btn btn-default">注册</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="righttop">
+                <br>
+                <br>
+                <h2>66鲜花店<br></h2>
+                <h3>欢迎您的选购</h3>
+            </div>
+            <div id="menu">
+                <ul id="xuanhua">
+                    <li>按花材
+                        <ul>
+                            <li><a href="#">红玫瑰</a></li>
+                            <li><a href="#">粉玫瑰</a></li>
+                            <li><a href="#">白玫瑰</a></li>
+                            <li><a href="#">康乃馨</a></li>
+                            <li><a href="#">郁金香</a></li>
+                            <li><a href="#">百合花</a></li>
+                            <li><a href="#">马蹄莲</a></li>
+                        </ul>
+                    </li>
+                    <li>按价格
+                        <ul>
+                            <li><a href="#">200元以下</a></li>
+                            <li><a href="#">200-300元</a></li>
+                            <li><a href="#">300-500元</a></li>
+                            <li><a href="#">500-800元</a></li>
+                            <li><a href="#">800-1000元</a></li>
+                            <li><a href="#">1000元以上</a></li>
+                        </ul>
+                    </li>
+                    <li>按数量
+                        <ul>
+                            <li><a href="#">1朵</a></li>
+                            <li><a href="#">3朵</a></li>
+                            <li><a href="#">9朵</a></li>
+                            <li><a href="#">11朵</a></li>
+                            <li><a href="#">19朵</a></li>
+                            <li><a href="#">66朵</a></li>
+                            <li><a href="#">99朵</a></li>
+                        </ul>
+                    </li>
+                    <li>按节日
+                        <ul>
+                            <li><a href="#">春节</a></li>
+                            <li><a href="#">情人节</a></li>
+                            <li><a href="#">元旦节</a></li>
+                            <li><a href="#">妇女节</a></li>
+                            <li><a href="#">母亲节</a></li>
+                            <li><a href="#">父亲节</a></li>
+                            <li><a href="#">教师节</a></li>
+                            <li><a href="#">中秋节</a></li>
+                        </ul>
+                    </li>
+                    <li>按用途
+                        <ul>
+                            <li><a href="#">爱情鲜花</a></li>
+                            <li><a href="#">友情鲜花</a></li>
+                            <li><a href="#">生日鲜花</a></li>
+                            <li><a href="#">开业鲜花</a></li>
+                            <li><a href="#">感恩鲜花</a></li>
+                            <li><a href="#">祝福鲜花</a></li>
+                            <li><a href="#">家庭鲜花</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div id="rightcenter">
+                <p>玫瑰花语、百合花语、蓝色妖姬花语、满天星花语、薰衣草花语、勿忘我花语、风信子花语、向日葵花语、彼岸花的花语、白玫瑰花语、香槟玫瑰花语、郁金香花语、康乃馨的花语、桔梗花的花语、雏菊花语……这么多美丽鲜花的花语你都造吗？</p>
+                <p>还有送花的含义、送花数量的含义、送花朵数的含义、生日送花的技巧……种种送花的讲究，尽在花语大全。</p>
+                <h2>花材花语</h2>
+                <table>
+                    <tr>
+                        <th class="l">花材</th>
+                        <th class="r">花语</th>
+                    </tr>
+                    <tr>
+                        <td class="l">红玫瑰</td>
+                        <td class="r">热情,热恋,热爱着你</td>
+                    </tr>
+                    <tr>
+                        <td class="l">粉玫瑰</td>
+                        <td class="r">初恋,爱的宣言,关心</td>
+                    </tr>
+                    <tr>
+                        <td class="l">白玫瑰</td>
+                        <td class="r">天真,纯洁,纯真的爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l">紫玫瑰</td>
+                        <td class="r">浪漫真情,珍贵独特</td>
+                    </tr>
+                    <tr>
+                        <td class="l">蓝玫瑰</td>
+                        <td class="r">清纯的爱,敦厚善良</td>
+                    </tr>
+                    <tr>
+                        <td class="l">香槟玫瑰</td>
+                        <td class="r">我只钟情你一个</td>
+                    </tr>
+                    <tr>
+                        <td class="l">黄玫瑰</td>
+                        <td class="r">为爱道歉</td>
+                    </tr>
+                    <tr>
+                        <td class="l">红色康乃馨</td>
+                        <td class="r">思念,祝健康长寿</td>
+                    </tr>
+                    <tr>
+                        <td class="l">粉色康乃馨</td>
+                        <td class="r">祝永远美丽</td>
+                    </tr>
+                    <tr>
+                        <td class="l">黄色康乃馨</td>
+                        <td class="r">对母亲的感激之情,热爱着你</td>
+                    </tr>
+                    <tr>
+                        <td class="l">郁金香</td>
+                        <td class="r">爱的告白,永恒的祝福</td>
+                    </tr>
+                    <tr>
+                        <td class="l">马蹄莲</td>
+                        <td class="r">永恒,优雅,希望,纯洁</td>
+                    </tr>
+                    <tr>
+                        <td class="l">百合</td>
+                        <td class="r">顺利,心想事成</td>
+                    </tr>
+                    <tr>
+                        <td class="l">向日葵</td>
+                        <td class="r">勇敢的追求幸福,沉默的爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l" class="l">非洲菊</td>
+                        <td class="r">有毅力,不畏艰难,互敬互爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l">满天星</td>
+                        <td class="r">关怀,思恋,配角</td>
+                    </tr>
+                    <tr>
+                        <td class="l">勿忘我</td>
+                        <td class="r">永恒的爱,深情厚谊</td>
+                    </tr>
+                    <tr>
+                        <td class="l" class="l">洋桔梗</td>
+                        <td class="r">富于感情,感动</td>
+                    </tr>
+                    <tr>
+                        <td class="l">剑兰</td>
+                        <td class="r">用心,清雅,康宁</td>
+                    </tr>
+                    <tr>
+                        <td class="l">紫罗兰</td>
+                        <td class="r">永恒的美于爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l" style="border-bottom: none">君子兰</td>
+                        <td class="r" style="border-bottom: none">高贵,有君子之风</td>
+                    </tr>
+                </table>
+                <h2>枝数花语</h2>
+                <table>
+                    <tr>
+                        <th class="l">枝数</th>
+                        <th class="r">花语</th>
+                    </tr>
+                    <tr>
+                        <td class="l">1朵</td>
+                        <td class="r">情有独钟,你是我的唯一</td>
+                    </tr>
+                    <tr>
+                        <td class="l">2朵</td>
+                        <td class="r">心中只有你我</td>
+                    </tr>
+                    <tr>
+                        <td class="l">4朵</td>
+                        <td class="r">誓言,承诺,山盟海誓</td>
+                    </tr>
+                    <tr>
+                        <td class="l">6朵</td>
+                        <td class="r">愿你一切顺利</td>
+                    </tr>
+                    <tr>
+                        <td class="l">8朵</td>
+                        <td class="r">深表歉意,盼您原谅</td>
+                    </tr>
+                    <tr>
+                        <td class="l">9朵</td>
+                        <td class="r">终身相爱,无怨无悔</td>
+                    </tr>
+                    <tr>
+                        <td class="l">10朵</td>
+                        <td class="r">完美的爱情,十全十美</td>
+                    </tr>
+                    <tr>
+                        <td class="l">11朵</td>
+                        <td class="r">一心一意</td>
+                    </tr>
+                    <tr>
+                        <td class="l">13朵</td>
+                        <td class="r">暗恋</td>
+                    </tr>
+                    <tr>
+                        <td class="l">16朵</td>
+                        <td class="r">爱的最高点</td>
+                    </tr>
+                    <tr>
+                        <td class="l">17朵</td>
+                        <td class="r">好聚好散</td>
+                    </tr>
+                    <tr>
+                        <td class="l">20朵</td>
+                        <td class="r">此情不渝,永远爱你</td>
+                    </tr>
+                    <tr>
+                        <td class="l">21朵</td>
+                        <td class="r">你是我的爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l">22朵</td>
+                        <td class="r">两情相悦,你侬我侬</td>
+                    </tr>
+                    <tr>
+                        <td class="l">33朵</td>
+                        <td class="r">爱你三生三世</td>
+                    </tr>
+                    <tr>
+                        <td class="l">44朵</td>
+                        <td class="r">亘古不变的誓言</td>
+                    </tr>
+                    <tr>
+                        <td class="l">55朵</td>
+                        <td class="r">无悔的爱</td>
+                    </tr>
+                    <tr>
+                        <td class="l">88朵</td>
+                        <td class="r">用心弥补一切</td>
+                    </tr>
+                    <tr>
+                        <td class="l" style="border-bottom: none">99朵</td>
+                        <td class="r" style="border-bottom: none">长相厮守</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="foot">
+        <div id="bq">
+            <a href="#"><img src="images/bq1.png"></a>
+            <a href="#"><img src="images/bq2.gif"></a>
+            <a href="#"><img src="images/bq3.gif"></a>
+            <a href="#"><img src="images/bq4.gif"></a>
+            <a href="#"><img src="images/bq5.jpg"></a>
+        </div>
+        <p>中国花卉协会会员 中国电子商务协会会员 ICP经营许可证：粤B2-20050744 | 粤ICP备09171662号 Copyright © 2005-2016
+            <br>中国鲜花礼品网 <a href="#">www.66.com</a>中国鲜花网领先品牌，鲜花速递专家！
+        </p>
+    </div>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("#right #menu #xuanhua>li").mouseenter(function() {
+            $(this).find("ul").slideDown(500);
+        })
+        $("#right #menu #xuanhua>li").mouseleave(function() {
+            $(this).find("ul").slideUp();
+        })
+    })
+    </script>
+</body>
+
+</html>
